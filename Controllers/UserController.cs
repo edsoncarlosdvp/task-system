@@ -7,48 +7,48 @@ namespace TaskSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class TaskController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly ITaskRepository _taskRepository;
 
-        public UserController(IUserRepository userRepository)
+        public TaskController(ITaskRepository taskRepository)
         {
-            _userRepository = userRepository;
+            _taskRepository = taskRepository;
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<UserModel>>> SearchAllUser()
+        public async Task<ActionResult<List<TaskModel>>> SearchAllTask()
         {
-            List<UserModel> users = await _userRepository.SearchAllUser();
-            return Ok(users);
+            List<TaskModel> tasks = await _taskRepository.SearchAllTask();
+            return Ok(tasks);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserModel>> FindById(int id)
+        public async Task<ActionResult<TaskModel>> FindById(int id)
         {
-            UserModel user = await _userRepository.FindById(id);
-            return Ok(user);
+            TaskModel task = await _taskRepository.FindById(id);
+            return Ok(task);
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserModel>> Register([FromBody] UserModel userModel)
+        public async Task<ActionResult<TaskModel>> Register([FromBody] TaskModel taskModel)
         {
-            UserModel user = await _userRepository.AddUser(userModel);
-            return Ok(user);
+            TaskModel task = await _taskRepository.AddTask(taskModel);
+            return Ok(task);
         }
 
         [HttpPut("{put}")]
-        public async Task<ActionResult<UserModel>> Update([FromBody] UserModel userModel, int id)
+        public async Task<ActionResult<TaskModel>> Update([FromBody] TaskModel taskModel, int id)
         {
-            userModel.Id = id;
-            UserModel user = await _userRepository.UpdateUser(userModel, id);
-            return Ok(user);
+            taskModel.Id = id;
+            TaskModel task = await _taskRepository.UpdateTask(taskModel, id);
+            return Ok(task);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UserModel>> Delete(int id)
+        public async Task<ActionResult<TaskModel>> Delete(int id)
         {
-            bool deleted = await _userRepository.DeleteUser(id);
+            bool deleted = await _taskRepository.DeleteTask(id);
             return Ok(deleted);
         }
     }

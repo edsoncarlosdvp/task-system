@@ -63,3 +63,6 @@ C:\Projects\DTI\Pocs\C#\TaskSystem\obj\Debug\net6.0\refint\TaskSystem.dll
 C:\Projects\DTI\Pocs\C#\TaskSystem\obj\Debug\net6.0\TaskSystem.pdb
 C:\Projects\DTI\Pocs\C#\TaskSystem\obj\Debug\net6.0\TaskSystem.genruntimeconfig.cache
 C:\Projects\DTI\Pocs\C#\TaskSystem\obj\Debug\net6.0\ref\TaskSystem.dll
+C:\Projects\Backend\C#\task-system\obj\Debug\net6.0\TaskSystem.dll
+C:\Projects\Backend\C#\task-system\obj\Debug\net6.0\refint\TaskSystem.dll
+C:\Projects\Backend\C#\task-system\obj\Debug\net6.0\TaskSystem.pdb
