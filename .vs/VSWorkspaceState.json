@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Data\\Map",
+    "\\Migrations",
+    "\\Models",
+    "\\Repository",
+    "\\Repository\\Interfaces"
+  ],
+  "SelectedNode": "\\Repository\\TaskRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

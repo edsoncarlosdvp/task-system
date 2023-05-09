@@ -15,12 +15,12 @@ namespace TaskSystem.Repository
 
         public async Task<List<TaskModel>> SearchAllUser()
         {
-            return await _dbContext.tasks.ToListAsync();
+            return await _dbContext.tasks.Include(user => user.user).ToListAsync();
         }
 
         public async Task<TaskModel> FindById(int id)
         {
-            return await _dbContext.tasks.FirstOrDefaultAsync(task => task.Id == id);
+            return await _dbContext.tasks.Include(user => user.user).FirstOrDefaultAsync(task => task.Id == id);
         }
 
         public async Task<TaskModel> AddUser(TaskModel task)
