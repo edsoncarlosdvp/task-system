@@ -37,7 +37,7 @@ namespace UserSystem.Controllers
             return Ok(user);
         }
 
-        [HttpPut("{put}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<UserModel>> Update([FromBody] UserModel userModel, int id)
         {
             userModel.Id = id;

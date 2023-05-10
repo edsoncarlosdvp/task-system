@@ -36,7 +36,7 @@ namespace TaskSystem.Controllers
             return Ok(task);
         }
 
-        [HttpPut("{put}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<TaskModel>> Update([FromBody] TaskModel taskModel, int id)
         {
             taskModel.Id = id;
